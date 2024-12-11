@@ -3,16 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Viewer</title>
+    <title>Google Drive Video Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        iframe {
+            border: none;
+            margin-top: 20px;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <h1>Watch Video</h1>
+    <h1>Watch Video from Google Drive</h1>
+    <p>Below is an embedded video from Google Drive:</p>
+
+    <!-- Video Iframe -->
     <iframe 
         src="https://drive.google.com/file/d/1folRVMdboF2qfdJQLrqCOemJ-o57lABu/preview" 
-        width="640" 
-        height="480" 
+        width="800" 
+        height="450" 
         allow="autoplay; encrypted-media" 
         allowfullscreen>
     </iframe>
+
+    <!-- Troubleshooting Section -->
+    <div class="error">
+        <p>If you see "This video file is still being processed," follow these steps:</p>
+        <ol>
+            <li>Ensure the file has proper public permissions in Google Drive.</li>
+            <li>Check back after a few minutes, as the file may still be processing.</li>
+            <li>Use a different browser or clear your cache if the issue persists.</li>
+        </ol>
+    </div>
+
+    <!-- Additional Information -->
+    <p>
+        <strong>Note:</strong> If the video cannot play, it may still be processing or may not be supported for embedding.
+        Consider converting the file to MP4 format for better compatibility.
+    </p>
 </body>
 </html>
